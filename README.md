@@ -3,6 +3,8 @@
 Strona-wizytówka fikcyjnego biura architektonicznego z Łodzi, przygotowana jako **Zadanie 2** z przedmiotu
 *Marketing internetowy* (Politechnika Łódzka, 2026/2027). Projekt uwzględnia wnioski z analizy witryn z Zadania 1.
 
+**Wersja online:** https://michalandrzejczak001.github.io/linea-pracownia-architektury/
+
 ## Technologie
 
 - **React 19** + **TypeScript** (tryb `strict`) – aplikacja SPA
@@ -21,6 +23,8 @@ npm run build     # wersja produkcyjna w katalogu dist/
 npm run preview   # podgląd wersji produkcyjnej
 npm run lint      # ESLint
 ```
+
+Publikacja: każdy push na gałąź `main` buduje i publikuje stronę na GitHub Pages (`.github/workflows/deploy.yml`).
 
 ## Struktura
 

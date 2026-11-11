@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { fmt } from '../i18n/pl'
 import { useI18n } from '../i18n/LanguageContext'
 import { Img } from './ui'
+import { asset } from '../lib/asset'
 
 /**
  * Galeria z podglądem pełnoekranowym. Natywny <dialog> zapewnia pułapkę fokusu
@@ -74,7 +75,7 @@ export function Gallery({ images, alt }: { images: string[]; alt: string }) {
         {index !== null && (
           <div className="flex h-full flex-col items-center justify-center gap-4 p-4" onClick={(e) => e.target === e.currentTarget && close()}>
             <figure className="flex max-w-6xl flex-col items-center">
-              <img src={`/images/${images[index]}.webp`} alt={`${alt} – ${fmt(t.lightbox.counter, { n: index + 1, total })}`} className="max-h-[72vh] w-auto object-contain" />
+              <img src={asset(`images/${images[index]}.webp`)} alt={`${alt} – ${fmt(t.lightbox.counter, { n: index + 1, total })}`} className="max-h-[72vh] w-auto object-contain" />
               <figcaption className="mt-3 text-center text-sm text-paper/80" aria-live="polite">
                 {fmt(t.lightbox.counter, { n: index + 1, total })}
               </figcaption>

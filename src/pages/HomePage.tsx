@@ -11,6 +11,7 @@ import { CtaBand, Img, Reveal, SectionHeading, Seo } from '../components/ui'
 import { NewsCard, ProjectCard, TestimonialCard } from '../components/cards'
 import { BeforeAfter } from '../components/BeforeAfter'
 import { ProcessSteps } from '../components/sections'
+import { asset } from '../lib/asset'
 
 export function HomePage() {
   const { t, l, lang, path, formatNumber, formatPrice } = useI18n()
@@ -131,13 +132,13 @@ export function HomePage() {
             muted
             playsInline
             preload="none"
-            poster="/images/hero-sm.webp"
+            poster={asset('images/hero-sm.webp')}
             aria-label={t.home.videoLabel}
             width={1280}
             height={800}
           >
-            <source src="/video/linea-realizacje.mp4" type="video/mp4" />
-            <track kind="captions" src={`/video/linea-realizacje.${lang}.vtt`} srcLang={lang} label={lang === 'pl' ? 'Polski' : 'English'} default />
+            <source src={asset('video/linea-realizacje.mp4')} type="video/mp4" />
+            <track kind="captions" src={asset(`video/linea-realizacje.${lang}.vtt`)} srcLang={lang} label={lang === 'pl' ? 'Polski' : 'English'} default />
           </video>
         </div>
       </section>

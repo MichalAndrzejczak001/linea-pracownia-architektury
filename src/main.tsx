@@ -52,7 +52,7 @@ const router = createBrowserRouter([
   { path: '/', element: <Navigate to={`/${preferred}`} replace /> },
   ...LANGS.map(langRoutes),
   { path: '*', element: <Layout lang="pl" />, children: [{ path: '*', element: <NotFoundPage /> }] },
-])
+], { basename: import.meta.env.BASE_URL.replace(/\/$/, '') || '/' })
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

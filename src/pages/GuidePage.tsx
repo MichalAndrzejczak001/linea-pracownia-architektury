@@ -2,12 +2,13 @@ import { Link } from 'react-router'
 import { CheckSquare, Download, FileText } from 'lucide-react'
 import { useI18n } from '../i18n/LanguageContext'
 import { Img, PageHeader, Seo } from '../components/ui'
+import { asset } from '../lib/asset'
 
 /** Materiał do pobrania bez zapisu na listę – „lead magnet” (kryterium C2 z zadania 1). */
 export function GuidePage() {
   const { t, lang, path } = useI18n()
   const g = t.guide
-  const file = `/files/linea-poradnik-${lang}.pdf`
+  const file = asset(`files/linea-poradnik-${lang}.pdf`)
 
   return (
     <>

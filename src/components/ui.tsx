@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ElementType, type HTMLAttributes, type ReactNode } from 'react'
 import { Link } from 'react-router'
 import { useI18n } from '../i18n/LanguageContext'
+import { asset } from '../lib/asset'
 
 /* ---------- Logo (sygnet + logotyp) ---------- */
 
@@ -41,12 +42,12 @@ interface ImgProps {
 }
 
 export function Img({ name, alt, className = '', sizes = '(min-width: 1024px) 50vw, 100vw', priority = false, variant = 'wide' }: ImgProps) {
-  const src = `/images/${name}.webp`
+  const src = asset(`images/${name}.webp`)
   const dims = variant === 'square' ? { width: 600, height: 600 } : { width: 1600, height: 1000 }
   return (
     <img
       src={src}
-      srcSet={variant === 'wide' ? `/images/${name}-sm.webp 800w, ${src} 1600w` : undefined}
+      srcSet={variant === 'wide' ? `${asset(`images/${name}-sm.webp`)} 800w, ${src} 1600w` : undefined}
       sizes={variant === 'wide' ? sizes : undefined}
       alt={alt}
       {...dims}

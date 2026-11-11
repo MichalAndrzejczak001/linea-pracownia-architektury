@@ -1,6 +1,7 @@
 import { useId, useState } from 'react'
 import { MoveHorizontal } from 'lucide-react'
 import { useI18n } from '../i18n/LanguageContext'
+import { asset } from '../lib/asset'
 
 /**
  * Porównanie „szkic ↔ realizacja”. Sterowane natywnym <input type="range">,
@@ -13,9 +14,9 @@ export function BeforeAfter({ before, after, alt }: { before: string; after: str
 
   return (
     <div className="relative aspect-[16/10] w-full select-none overflow-hidden bg-sand">
-      <img src={`/images/${after}.webp`} alt={`${alt} – ${t.beforeAfter.after}`} width={1600} height={1000} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={asset(`images/${after}.webp`)} alt={`${alt} – ${t.beforeAfter.after}`} width={1600} height={1000} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
       <img
-        src={`/images/${before}.webp`}
+        src={asset(`images/${before}.webp`)}
         alt={`${alt} – ${t.beforeAfter.before}`}
         width={1600}
         height={1000}

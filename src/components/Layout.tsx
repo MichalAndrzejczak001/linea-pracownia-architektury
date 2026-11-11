@@ -6,6 +6,7 @@ import type { Lang } from '../i18n/types'
 import { Header } from './Header'
 import { Footer } from './Footer'
 import { CookieBanner } from './CookieBanner'
+import { StructuredData } from './StructuredData'
 
 function BackToTop() {
   const { t } = useI18n()
@@ -33,7 +34,14 @@ function BackToTop() {
 
 function Shell() {
   const { t } = useI18n()
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
+
+  // Kotwice (#kalkulator, #faq) po wejściu na podstronę ładowaną leniwie – element istnieje dopiero po renderze
+  useEffect(() => {
+    if (!hash) return
+    const frame = requestAnimationFrame(() => document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView())
+    return () => cancelAnimationFrame(frame)
+  }, [pathname, hash])
   const navigation = useNavigation()
   const mainRef = useRef<HTMLElement>(null)
   const prevPath = useRef(pathname)
@@ -65,6 +73,7 @@ function Shell() {
       <Footer />
       <BackToTop />
       <CookieBanner />
+      <StructuredData />
       <ScrollRestoration />
     </>
   )

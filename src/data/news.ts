@@ -192,6 +192,101 @@ export const NEWS: NewsPost[] = [
       ],
     },
   },
+  {
+    slug: 'budzet-budowy-domu-jak-go-policzyc',
+    date: '2026-11-06',
+    category: 'advice',
+    author: 'Paweł Sadowski',
+    image: 'dom-z-patio-1',
+    title: {
+      pl: 'Budżet budowy domu – jak go policzyć, zanim zaczniesz projekt',
+      en: 'Your house-building budget – how to work it out before the design starts',
+    },
+    excerpt: {
+      pl: 'Najczęstszy błąd inwestorów to liczenie samego stanu surowego. Pokazujemy, z jakich części składa się budżet całej inwestycji.',
+      en: 'The most common mistake is budgeting only for the shell. Here is what the budget of the whole investment is made of.',
+    },
+    body: {
+      pl: [
+        'Na pierwszym spotkaniu prawie zawsze pada pytanie: „ile będzie kosztował dom?”. Odpowiedź zależy od metrażu, standardu i działki, ale sposób liczenia jest zawsze ten sam – trzeba policzyć całą inwestycję, a nie tylko budowę murów.',
+        '## Z czego składa się budżet',
+        'W naszych realizacjach koszty rozkładają się zwykle tak: projekt i formalności 3–5%, stan surowy zamknięty 35–40%, instalacje 15–20%, wykończenie wnętrz 25–30%, zagospodarowanie terenu 5–8%. Do tego zawsze doliczamy rezerwę 10–15% na nieprzewidziane wydatki.',
+        '## Jak zmniejszyć koszty już na etapie projektu',
+        'Zwarta bryła bez zbędnych załamań, prosty dach, mniej ścian nośnych i dobrze zaplanowane instalacje obniżają koszt budowy bardziej niż tańsze materiały. Dlatego budżet warto podać architektowi od razu – wtedy projekt od początku jest realny do zbudowania.',
+        'Orientacyjny koszt samego projektu sprawdzisz w kalkulatorze na stronie Oferta, a pełną listę kontrolną znajdziesz w naszym bezpłatnym poradniku PDF.',
+      ],
+      en: [
+        'At the first meeting we almost always hear: “how much will the house cost?”. The answer depends on size, standard and plot, but the method is always the same – you have to budget for the whole investment, not just the walls.',
+        '## What the budget is made of',
+        'In our projects costs usually split like this: design and permits 3–5%, closed shell 35–40%, building services 15–20%, interior fit-out 25–30%, landscaping 5–8%. On top of that we always add a 10–15% contingency for unexpected costs.',
+        '## How to cut costs at the design stage',
+        'A compact form without unnecessary corners, a simple roof, fewer load-bearing walls and well-planned services lower construction costs more than cheaper materials. That is why you should tell your architect the budget straight away – then the design is buildable from day one.',
+        'You can check the indicative design fee in the calculator on the Services page, and the full checklist is in our free PDF guide.',
+      ],
+    },
+  },
+  {
+    slug: 'adaptacja-poddasza-od-czego-zaczac',
+    date: '2026-10-20',
+    category: 'advice',
+    author: 'Tomasz Wierzbicki',
+    image: 'apartament-piotrkowska-2',
+    title: {
+      pl: 'Adaptacja poddasza – od czego zacząć',
+      en: 'Converting an attic – where to start',
+    },
+    excerpt: {
+      pl: 'Nieużytkowe poddasze to często najtańsze dodatkowe metry. Wyjaśniamy, co trzeba sprawdzić, zanim zamówisz projekt.',
+      en: 'An unused attic is often the cheapest extra space you can get. Here is what to check before ordering a design.',
+    },
+    body: {
+      pl: [
+        'Adaptacja poddasza w domu lub kamienicy pozwala zyskać nawet kilkadziesiąt metrów bez rozbudowy budynku. Zanim jednak powstanie projekt, trzeba sprawdzić kilka rzeczy.',
+        '## Co sprawdzamy na początku',
+        'Wysokość pomieszczeń i kąt dachu (to od nich zależy powierzchnia użytkowa), stan i rodzaj więźby dachowej, możliwość doprowadzenia instalacji oraz dostęp do światła dziennego – czy wystarczą okna dachowe, czy potrzebne są lukarny.',
+        '## Formalności',
+        'Zakres formalności zależy od skali prac. Inaczej traktowany jest remont wnętrza, a inaczej zmiana konstrukcji dachu, nowe lukarny czy zmiana sposobu użytkowania. W budynkach zabytkowych dochodzi uzgodnienie z konserwatorem. Na konsultacji sprawdzamy, jaka procedura będzie potrzebna w Twoim przypadku.',
+        'Jeśli myślisz o poddaszu w kamienicy na terenie Łodzi, zobacz nasz projekt Loftu na Księżym Młynie – zasady są bardzo podobne.',
+      ],
+      en: [
+        'Converting the attic of a house or tenement can add dozens of square metres without extending the building. Before the design starts, however, a few things need checking.',
+        '## What we check first',
+        'Room height and roof pitch (they determine the usable area), the condition and type of the roof structure, the possibility of running services, and access to daylight – whether roof windows are enough or dormers are needed.',
+        '## Paperwork',
+        'The paperwork depends on the scale of the work. An interior refurbishment is treated differently from changing the roof structure, adding dormers or changing the use of the space. Listed buildings also need heritage approval. At the consultation we check which procedure applies in your case.',
+        'If you are thinking about an attic in a Łódź tenement, take a look at our Księży Młyn Loft project – the principles are very similar.',
+      ],
+    },
+  },
+  {
+    slug: 'makiety-i-wirtualne-spacery',
+    date: '2026-09-22',
+    category: 'studio',
+    author: 'Julia Kmiecik',
+    image: 'studio-1',
+    title: {
+      pl: 'Makiety i wirtualne spacery – jak pokazujemy projekty klientom',
+      en: 'Models and virtual walkthroughs – how we present designs to clients',
+    },
+    excerpt: {
+      pl: 'Oprócz wizualizacji przygotowujemy makiety i spacery 3D, w których można „wejść” do domu jeszcze przed budową.',
+      en: 'Besides visualisations we prepare physical models and 3D walkthroughs that let you “enter” the house before it is built.',
+    },
+    body: {
+      pl: [
+        'Rysunki techniczne nie każdemu wiele mówią. Dlatego każdą koncepcję domu pokazujemy na trzy sposoby: wizualizacje, prostą makietę bryły i wirtualny spacer w modelu 3D.',
+        '## Dlaczego to ważne',
+        'Spacer po modelu pozwala sprawdzić proporcje pomieszczeń, widok z okien i światło o różnych porach dnia. Klienci najczęściej właśnie na tym etapie zmieniają układ – a zmiana w modelu jest wielokrotnie tańsza niż zmiana na budowie.',
+        'Spacery 3D są w cenie każdej koncepcji domu i wnętrza. Możesz je obejrzeć w pracowni albo zdalnie, przez przeglądarkę.',
+      ],
+      en: [
+        'Technical drawings do not speak to everyone. That is why we present every house concept in three ways: visualisations, a simple massing model and a virtual walkthrough of the 3D model.',
+        '## Why it matters',
+        'A walkthrough lets you check room proportions, the view from the windows and daylight at different times of day. This is when clients most often change the layout – and a change in the model is many times cheaper than a change on site.',
+        '3D walkthroughs are included in every house and interior concept. You can view them at the studio or remotely in your browser.',
+      ],
+    },
+  },
 ]
 
 /** Najnowsze wpisy na początku – aktualności zawsze w kolejności od najświeższych. */

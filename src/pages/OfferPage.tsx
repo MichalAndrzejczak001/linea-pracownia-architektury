@@ -113,7 +113,7 @@ export function OfferPage() {
         </div>
       </section>
 
-      <section className="container-x py-20" aria-labelledby="faq-heading">
+      <section id="faq" className="container-x scroll-mt-24 py-20" aria-labelledby="faq-heading">
         <SectionHeading id="faq-heading" title={t.offer.faqTitle} />
         <Faq />
       </section>

@@ -10,6 +10,7 @@ export const ROUTES = {
   contact: { pl: 'kontakt', en: 'contact' },
   guide: { pl: 'poradnik', en: 'guide' },
   privacy: { pl: 'polityka-prywatnosci', en: 'privacy-policy' },
+  accessibility: { pl: 'deklaracja-dostepnosci', en: 'accessibility-statement' },
 } satisfies Record<string, Localized>
 
 export type RouteId = keyof typeof ROUTES

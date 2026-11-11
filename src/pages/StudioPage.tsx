@@ -1,7 +1,7 @@
 import { Award } from 'lucide-react'
 import { useI18n } from '../i18n/LanguageContext'
 import { fmt } from '../i18n/pl'
-import { COMPANY, STATS } from '../data/company'
+import { COMPANY, HISTORY, STATS } from '../data/company'
 import { AWARDS, TEAM } from '../data/people'
 import { CtaBand, Img, PageHeader, Reveal, SectionHeading, Seo, SocialIcon } from '../components/ui'
 
@@ -48,6 +48,20 @@ export function StudioPage() {
             ))}
           </ul>
         </div>
+      </section>
+
+      <section className="container-x pt-20" aria-labelledby="history-title">
+        <SectionHeading id="history-title" title={t.studio.historyTitle} lead={t.studio.historyLead} />
+        <ol className="relative border-l-2 border-line pl-8 sm:ml-4">
+          {HISTORY.map((h, i) => (
+            <Reveal as="li" key={h.year} delay={i * 60} className="relative pb-10 last:pb-0">
+              <span aria-hidden="true" className="absolute top-1.5 -left-[41px] h-4 w-4 rounded-full border-4 border-paper bg-brass" />
+              <p className="text-sm font-extrabold tracking-[0.15em] text-brass">{h.year}</p>
+              <h3 className="mt-1 text-xl font-bold">{l(h.title)}</h3>
+              <p className="mt-2 max-w-2xl leading-relaxed text-muted">{l(h.text)}</p>
+            </Reveal>
+          ))}
+        </ol>
       </section>
 
       <section className="container-x py-20" aria-labelledby="team-title">

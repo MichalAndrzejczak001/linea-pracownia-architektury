@@ -105,6 +105,11 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link to={path('accessibility')} className="hover:text-brass-light hover:underline">
+                {t.nav.accessibility}
+              </Link>
+            </li>
+            <li>
               <button type="button" onClick={openCookieSettings} className="hover:text-brass-light hover:underline">
                 {t.cookies.manage}
               </button>

@@ -38,3 +38,55 @@ export const STATS: { value: number; suffix?: string; label: Localized }[] = [
   { value: 48000, suffix: ' m²', label: { pl: 'zaprojektowanej powierzchni', en: 'of designed floor area' } },
   { value: 97, suffix: '%', label: { pl: 'inwestycji w zakładanym budżecie', en: 'of projects delivered on budget' } },
 ]
+
+/** Historia firmy – oś czasu na podstronie Pracownia. */
+export const HISTORY: { year: number; title: Localized; text: Localized }[] = [
+  {
+    year: 2012,
+    title: { pl: 'Początek przy Piotrkowskiej', en: 'Starting out on Piotrkowska Street' },
+    text: {
+      pl: 'Marta Linde i Tomasz Wierzbicki zakładają pracownię w dwupokojowym biurze w kamienicy. Pierwsze zlecenia to domy jednorodzinne pod Łodzią.',
+      en: 'Marta Linde and Tomasz Wierzbicki open the studio in a two-room tenement office. The first commissions are family houses around Łódź.',
+    },
+  },
+  {
+    year: 2015,
+    title: { pl: 'Pierwszy loft', en: 'The first loft' },
+    text: {
+      pl: 'Pierwsza adaptacja mieszkania w budynku poprzemysłowym. Od tej pory przebudowy łódzkich fabryk i kamienic stają się specjalnością pracowni.',
+      en: 'Our first flat conversion in a post-industrial building. Since then, converting Łódź factories and tenements has become our speciality.',
+    },
+  },
+  {
+    year: 2018,
+    title: { pl: 'Projektowanie w BIM', en: 'Designing in BIM' },
+    text: {
+      pl: 'Przechodzimy na projektowanie w modelu BIM i zaczynamy koordynować wszystkie branże w jednym modelu. Do zespołu dołącza Paweł Sadowski.',
+      en: 'We switch to BIM and start coordinating all disciplines in a single model. Paweł Sadowski joins the team.',
+    },
+  },
+  {
+    year: 2020,
+    title: { pl: 'Przeprowadzka do tkalni', en: 'Moving into the weaving mill' },
+    text: {
+      pl: 'Pracownia przenosi się do odnowionej hali dawnej tkalni przy ul. Ogrodowej. Julia Kmiecik tworzy dział projektowania wnętrz.',
+      en: 'The studio moves into a renovated hall of a former weaving mill on Ogrodowa Street. Julia Kmiecik sets up the interior design team.',
+    },
+  },
+  {
+    year: 2024,
+    title: { pl: 'Nagroda za Loft na Księżym Młynie', en: 'Award for the Księży Młyn Loft' },
+    text: {
+      pl: 'Nagroda czytelników portalu Architektura Łodzi. Adam Nowicki rozwija analizy energetyczne – nasze domy schodzą poniżej 45 kWh/m²·rok.',
+      en: 'Readers’ award from the Łódź Architecture portal. Adam Nowicki develops our energy analysis – our houses drop below 45 kWh/m² per year.',
+    },
+  },
+  {
+    year: 2026,
+    title: { pl: 'Wyróżnienie i nowa strona', en: 'Commendation and a new website' },
+    text: {
+      pl: 'Wyróżnienie w konkursie Łódzka Architektura Roku. Uruchamiamy nową stronę z cennikiem, kalkulatorem wyceny i bezpłatnym poradnikiem.',
+      en: 'A commendation in the Łódź Architecture of the Year competition. We launch a new website with pricing, a cost calculator and a free guide.',
+    },
+  },
+]

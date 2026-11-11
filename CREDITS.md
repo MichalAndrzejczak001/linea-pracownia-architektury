@@ -1,6 +1,6 @@
 # Źródła zdjęć
 
-Wszystkie fotografie pochodzą z serwisu [Unsplash](https://unsplash.com) i są używane na zasadach [licencji Unsplash](https://unsplash.com/license) (bezpłatne użycie, również komercyjne, bez obowiązku podawania autora). Zdjęcia przeskalowano i zapisano w formacie WebP. Pliki `*-sketch.webp` to szkice wygenerowane programowo (detekcja krawędzi) z fotografii realizacji.
+Wszystkie fotografie pochodzą z serwisu [Unsplash](https://unsplash.com) i są używane na zasadach [licencji Unsplash](https://unsplash.com/license) (bezpłatne użycie, również komercyjne, bez obowiązku podawania autora). Zdjęcia przeskalowano i zapisano w formacie WebP. Pliki `*-sketch.webp` to szkice wygenerowane programowo (detekcja krawędzi) z fotografii realizacji. Film `video/linea-realizacje.mp4` złożono z tych samych zdjęć (ffmpeg: przybliżenie i przenikanie).
 
 | Plik | Źródło |
 |---|---|

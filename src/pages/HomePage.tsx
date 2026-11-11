@@ -13,7 +13,7 @@ import { BeforeAfter } from '../components/BeforeAfter'
 import { ProcessSteps } from '../components/sections'
 
 export function HomePage() {
-  const { t, l, path, formatNumber, formatPrice } = useI18n()
+  const { t, l, lang, path, formatNumber, formatPrice } = useI18n()
   const featured = PROJECTS.filter((p) => p.featured)
   const loft = PROJECTS.find((p) => p.slug === 'loft-ksiezy-mlyn')!
 
@@ -111,6 +111,34 @@ export function HomePage() {
               </Reveal>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* 4b. Film z realizacjami (bez dźwięku, z napisami WebVTT) */}
+      <section className="on-dark bg-ink text-paper" aria-labelledby="video-title">
+        <div className="container-x grid items-center gap-10 py-20 lg:grid-cols-5">
+          <div className="lg:col-span-2">
+            <p className="eyebrow mb-3">{t.home.videoEyebrow}</p>
+            <h2 id="video-title" className="text-3xl font-bold sm:text-4xl">
+              {t.home.videoTitle}
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-paper/80">{t.home.videoLead}</p>
+            <p className="mt-4 text-sm text-paper/70">{t.home.videoNote}</p>
+          </div>
+          <video
+            className="aspect-[16/10] w-full bg-ink-2 lg:col-span-3"
+            controls
+            muted
+            playsInline
+            preload="none"
+            poster="/images/hero-sm.webp"
+            aria-label={t.home.videoLabel}
+            width={1280}
+            height={800}
+          >
+            <source src="/video/linea-realizacje.mp4" type="video/mp4" />
+            <track kind="captions" src={`/video/linea-realizacje.${lang}.vtt`} srcLang={lang} label={lang === 'pl' ? 'Polski' : 'English'} default />
+          </video>
         </div>
       </section>
 

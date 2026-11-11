@@ -5,6 +5,7 @@ import { useI18n } from '../i18n/LanguageContext'
 import { translatePath, type RouteId } from '../i18n/routes'
 import { LANGS } from '../i18n/types'
 import { Logo } from './ui'
+import { SearchDialog } from './SearchDialog'
 
 const NAV: RouteId[] = ['offer', 'projects', 'studio', 'news', 'guide', 'contact']
 
@@ -61,7 +62,7 @@ export function Header() {
         </Link>
 
         <nav aria-label={t.nav.main} className="hidden lg:block">
-          <ul className="flex items-center gap-7">
+          <ul className="flex items-center gap-5 xl:gap-7">
             {NAV.map((id) => (
               <li key={id}>
                 <NavLink to={path(id)} className={navClass}>
@@ -72,12 +73,14 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
-          {langSwitch}
-          <Link to={path('contact')} className="btn-accent">
-            {t.header.cta}
-          </Link>
-        </div>
+        <div className="flex items-center gap-3 xl:gap-4">
+          <SearchDialog />
+          <div className="hidden items-center gap-3 lg:flex xl:gap-4">
+            {langSwitch}
+            <Link to={path('contact')} className="btn-accent">
+              {t.header.cta}
+            </Link>
+          </div>
 
         <button
           type="button"
@@ -89,6 +92,7 @@ export function Header() {
         >
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
+        </div>
       </div>
     </header>
 

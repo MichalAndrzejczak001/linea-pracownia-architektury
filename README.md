@@ -30,11 +30,12 @@ src/
   data/        treści: firma, usługi i cennik, projekty, aktualności, zespół, opinie, FAQ
   components/  nagłówek, stopka, baner cookies, kalkulator, galeria, suwak szkic/realizacja…
   pages/       podstrony: Start, Oferta, Projekty (+ szczegóły), Pracownia, Aktualności (+ wpis),
-               Kontakt (brief), Poradnik, Polityka prywatności, 404
-  lib/         walidacja formularzy, logika kalkulatora wyceny
+               Kontakt (brief), Poradnik, Polityka prywatności, Deklaracja dostępności, 404
+  lib/         walidacja formularzy, logika kalkulatora wyceny, wyszukiwarka
 public/
   images/      zdjęcia WebP (źródła w CREDITS.md)
   files/       poradnik PDF (PL i EN)
+  video/       film z realizacjami (MP4, wygenerowany ffmpeg ze zdjęć) i napisy WebVTT PL/EN
 ```
 
 Formularze działają w trybie demonstracyjnym (walidacja i komunikat sukcesu, bez wysyłki na serwer).

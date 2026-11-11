@@ -24,6 +24,7 @@ const NewsDetail = () => import('./pages/NewsDetailPage').then((m) => ({ default
 const Contact = () => import('./pages/ContactPage').then((m) => ({ default: m.ContactPage }))
 const Guide = () => import('./pages/GuidePage').then((m) => ({ default: m.GuidePage }))
 const Privacy = () => import('./pages/PrivacyPage').then((m) => ({ default: m.PrivacyPage }))
+const Accessibility = () => import('./pages/AccessibilityPage').then((m) => ({ default: m.AccessibilityPage }))
 
 /** Dla każdego języka osobne drzewo tras z lokalizowanymi adresami (/pl/oferta, /en/services). */
 const langRoutes = (lang: Lang): RouteObject => ({
@@ -40,6 +41,7 @@ const langRoutes = (lang: Lang): RouteObject => ({
     { path: ROUTES.contact[lang], ...page(Contact) },
     { path: ROUTES.guide[lang], ...page(Guide) },
     { path: ROUTES.privacy[lang], ...page(Privacy) },
+    { path: ROUTES.accessibility[lang], ...page(Accessibility) },
     { path: '*', element: <NotFoundPage /> },
   ],
 })

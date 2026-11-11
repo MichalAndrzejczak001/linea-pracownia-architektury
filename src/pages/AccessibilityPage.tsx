@@ -23,12 +23,12 @@ const SECTIONS: { h: Localized; p: Localized<string[]> }[] = [
       pl: [
         'Całą stronę można obsłużyć klawiaturą, a pierwszym elementem jest link „Przejdź do treści”. Kolory tekstu mają kontrast zgodny z poziomem AA, zdjęcia mają opisy alternatywne, a formularze – etykiety i komunikaty błędów odczytywane przez czytniki ekranu.',
         'Animacje są wyłączane, gdy w systemie włączone jest ograniczenie ruchu. Strona działa przy powiększeniu do 200% i na ekranach od 320 pikseli szerokości.',
-        'Każdą zmianę strony sprawdzamy automatycznym testem axe (WCAG 2.2 A i AA) i narzędziem Lighthouse oraz ręcznie – klawiaturą i czytnikiem ekranu.',
+        'Każdą zmianę strony sprawdzamy automatycznym testem axe (WCAG 2.2 A i AA), narzędziem Lighthouse oraz ręcznie, obsługując stronę samą klawiaturą.',
       ],
       en: [
         'The whole site can be used with a keyboard, and the first element is a “Skip to content” link. Text colours meet AA contrast, images have alternative text, and forms have labels and error messages announced by screen readers.',
         'Animations are switched off when reduced motion is enabled in the operating system. The site works at 200% zoom and on screens from 320 pixels wide.',
-        'Every change is checked with an automated axe test (WCAG 2.2 A and AA) and Lighthouse, and manually with a keyboard and a screen reader.',
+        'Every change is checked with an automated axe test (WCAG 2.2 A and AA), with Lighthouse and manually, using the site with the keyboard only.',
       ],
     },
   },

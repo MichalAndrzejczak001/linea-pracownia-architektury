@@ -3,9 +3,9 @@ import { buildPath } from '../i18n/routes'
 import { PROJECTS } from '../data/projects'
 import { NEWS_SORTED } from '../data/news'
 import { SERVICES } from '../data/services'
-import { FAQ } from '../data/people'
+import { FAQ, JOBS, TEAM } from '../data/people'
 
-export type ResultType = 'project' | 'news' | 'service' | 'faq'
+export type ResultType = 'project' | 'news' | 'service' | 'faq' | 'person' | 'job'
 
 export interface SearchItem {
   type: ResultType
@@ -35,9 +35,13 @@ export function buildIndex(lang: Lang): SearchItem[] {
     ...PROJECTS.map((p) =>
       item('project', p.title[lang], p.lead[lang], buildPath(lang, 'projects', p.slug), `${p.location[lang]} ${p.challenge[lang]} ${p.solution[lang]} ${p.year}`),
     ),
-    ...SERVICES.map((s) => item('service', s.title[lang], s.lead[lang], `${buildPath(lang, 'offer')}#${s.id}`, s.scope[lang].join(' '))),
+    ...SERVICES.map((s) =>
+      item('service', s.title[lang], s.lead[lang], buildPath(lang, 'offer', s.slug), `${s.scope[lang].join(' ')} ${s.forWhom[lang]} ${s.faq.map((f) => f.q[lang]).join(' ')}`),
+    ),
+    ...TEAM.map((m) => item('person', m.name, m.role[lang], buildPath(lang, 'team', m.slug), `${m.bio[lang]} ${m.specialties[lang].join(' ')}`)),
+    ...JOBS.map((j) => item('job', j.title[lang], j.intro[lang], `${buildPath(lang, 'careers')}#${j.slug}`, j.requirements[lang].join(' '))),
     ...NEWS_SORTED.map((n) => item('news', n.title[lang], n.excerpt[lang], buildPath(lang, 'news', n.slug), n.body[lang].join(' '))),
-    ...FAQ.map((f) => item('faq', f.q[lang], f.a[lang], `${buildPath(lang, 'offer')}#faq`)),
+    ...FAQ.map((f) => item('faq', f.q[lang], f.a[lang], `${buildPath(lang, 'faq')}#${f.category}`)),
   ]
 }
 

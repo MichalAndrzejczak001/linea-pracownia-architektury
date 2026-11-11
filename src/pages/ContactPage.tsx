@@ -9,7 +9,7 @@ import { STANDARDS } from '../data/services'
 import { EMAIL_RE, PHONE_RE, digitsCount } from '../lib/validation'
 import { PageHeader, Seo } from '../components/ui'
 
-const TYPES = ['house', 'interior', 'adaptation', 'commercial', 'plot', 'other'] as const
+const TYPES = ['house', 'catalog', 'extension', 'interior', 'adaptation', 'commercial', 'plot', 'supervision', 'other'] as const
 const BUDGETS = ['b1', 'b2', 'b3', 'b4', 'unknown'] as const
 const STARTS = ['now', 'q', 'h', 'later'] as const
 const MODES = ['online', 'studio', 'phone'] as const

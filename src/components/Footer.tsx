@@ -7,7 +7,7 @@ import { NewsletterForm } from './NewsletterForm'
 import { Logo, SocialIcon } from './ui'
 import { openCookieSettings } from './CookieBanner'
 
-const LINKS: RouteId[] = ['offer', 'projects', 'studio', 'news', 'guide', 'contact']
+const LINKS: RouteId[] = ['offer', 'projects', 'studio', 'team', 'reviews', 'careers', 'news', 'faq', 'contact']
 
 export function Footer() {
   const { t, l, path } = useI18n()

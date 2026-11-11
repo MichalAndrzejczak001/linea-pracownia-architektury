@@ -24,24 +24,38 @@ const NewsDetail = () => import('./pages/NewsDetailPage').then((m) => ({ default
 const Contact = () => import('./pages/ContactPage').then((m) => ({ default: m.ContactPage }))
 const Guide = () => import('./pages/GuidePage').then((m) => ({ default: m.GuidePage }))
 const Privacy = () => import('./pages/PrivacyPage').then((m) => ({ default: m.PrivacyPage }))
+const Service = () => import('./pages/ServicePage').then((m) => ({ default: m.ServicePage }))
+const Team = () => import('./pages/TeamPages').then((m) => ({ default: m.TeamPage }))
+const Person = () => import('./pages/TeamPages').then((m) => ({ default: m.PersonPage }))
+const Reviews = () => import('./pages/ReviewsPage').then((m) => ({ default: m.ReviewsPage }))
+const Careers = () => import('./pages/CareersFaqPages').then((m) => ({ default: m.CareersPage }))
+const FaqList = () => import('./pages/CareersFaqPages').then((m) => ({ default: m.FaqPage }))
 const Accessibility = () => import('./pages/AccessibilityPage').then((m) => ({ default: m.AccessibilityPage }))
 
-/** Dla każdego języka osobne drzewo tras z lokalizowanymi adresami (/pl/oferta, /en/services). */
+/** Dla każdego języka osobne drzewo tras z lokalizowanymi adresami (/pl/uslugi, /en/services). */
 const langRoutes = (lang: Lang): RouteObject => ({
   path: `/${lang}`,
   element: <Layout lang={lang} />,
   children: [
     { index: true, element: <HomePage /> },
     { path: ROUTES.offer[lang], ...page(Offer) },
+    { path: `${ROUTES.offer[lang]}/:slug`, ...page(Service) },
     { path: ROUTES.projects[lang], ...page(Projects) },
     { path: `${ROUTES.projects[lang]}/:slug`, ...page(ProjectDetail) },
     { path: ROUTES.studio[lang], ...page(Studio) },
+    { path: ROUTES.team[lang], ...page(Team) },
+    { path: `${ROUTES.team[lang]}/:slug`, ...page(Person) },
+    { path: ROUTES.reviews[lang], ...page(Reviews) },
+    { path: ROUTES.careers[lang], ...page(Careers) },
+    { path: ROUTES.faq[lang], ...page(FaqList) },
     { path: ROUTES.news[lang], ...page(News) },
     { path: `${ROUTES.news[lang]}/:slug`, ...page(NewsDetail) },
     { path: ROUTES.contact[lang], ...page(Contact) },
     { path: ROUTES.guide[lang], ...page(Guide) },
     { path: ROUTES.privacy[lang], ...page(Privacy) },
     { path: ROUTES.accessibility[lang], ...page(Accessibility) },
+    // stary adres oferty (przed rozbudową menu) – przekierowanie na /pl/uslugi
+    ...(lang === 'pl' ? [{ path: 'oferta', element: <Navigate to="/pl/uslugi" replace /> }] : []),
     { path: '*', element: <NotFoundPage /> },
   ],
 })

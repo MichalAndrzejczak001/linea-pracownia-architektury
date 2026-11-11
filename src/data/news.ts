@@ -213,7 +213,7 @@ export const NEWS: NewsPost[] = [
         'W naszych realizacjach koszty rozkładają się zwykle tak: projekt i formalności 3–5%, stan surowy zamknięty 35–40%, instalacje 15–20%, wykończenie wnętrz 25–30%, zagospodarowanie terenu 5–8%. Do tego zawsze doliczamy rezerwę 10–15% na nieprzewidziane wydatki.',
         '## Jak zmniejszyć koszty już na etapie projektu',
         'Zwarta bryła bez zbędnych załamań, prosty dach, mniej ścian nośnych i dobrze zaplanowane instalacje obniżają koszt budowy bardziej niż tańsze materiały. Dlatego budżet warto podać architektowi od razu – wtedy projekt od początku jest realny do zbudowania.',
-        'Orientacyjny koszt samego projektu sprawdzisz w kalkulatorze na stronie Oferta, a pełną listę kontrolną znajdziesz w naszym bezpłatnym poradniku PDF.',
+        'Orientacyjny koszt samego projektu sprawdzisz w kalkulatorze na stronie Usługi, a pełną listę kontrolną znajdziesz w naszym bezpłatnym poradniku PDF.',
       ],
       en: [
         'At the first meeting we almost always hear: “how much will the house cost?”. The answer depends on size, standard and plot, but the method is always the same – you have to budget for the whole investment, not just the walls.',

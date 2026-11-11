@@ -3,18 +3,17 @@ import { ArrowRight, Download, Star } from 'lucide-react'
 import { useI18n } from '../i18n/LanguageContext'
 import { fmt } from '../i18n/pl'
 import { COMPANY, STATS } from '../data/company'
-import { SERVICES } from '../data/services'
 import { PROJECTS } from '../data/projects'
 import { NEWS_SORTED } from '../data/news'
 import { TESTIMONIALS } from '../data/people'
 import { CtaBand, Img, Reveal, SectionHeading, Seo } from '../components/ui'
 import { NewsCard, ProjectCard, TestimonialCard } from '../components/cards'
 import { BeforeAfter } from '../components/BeforeAfter'
-import { ProcessSteps } from '../components/sections'
+import { ProcessSteps, ServiceGrid } from '../components/sections'
 import { asset } from '../lib/asset'
 
 export function HomePage() {
-  const { t, l, lang, path, formatNumber, formatPrice } = useI18n()
+  const { t, l, lang, path, formatNumber } = useI18n()
   const featured = PROJECTS.filter((p) => p.featured)
   const loft = PROJECTS.find((p) => p.slug === 'loft-ksiezy-mlyn')!
 
@@ -67,32 +66,13 @@ export function HomePage() {
         </dl>
       </div>
 
-      {/* 3. Oferta z widełkami cen */}
+      {/* 3. Usługi z cenami „od” – 8 kart prowadzących do podstron */}
       <section className="container-x py-20 sm:py-24" aria-labelledby="services-title">
         <SectionHeading id="services-title" eyebrow={t.home.servicesEyebrow} title={t.home.servicesTitle} lead={t.home.servicesLead} />
-        <ul className="grid gap-6 md:grid-cols-2">
-          {SERVICES.map((s, i) => (
-            <Reveal as="li" key={s.id} delay={i * 80}>
-              <article className="group relative grid h-full overflow-hidden border border-line bg-white sm:grid-cols-5">
-                <Img name={`${s.image}-sm`} variant="single" alt="" className="h-48 w-full sm:col-span-2 sm:h-full" />
-                <div className="flex flex-col p-6 sm:col-span-3">
-                  <h3 className="text-xl font-bold">
-                    <Link to={`${path('offer')}#${s.id}`} className="after:absolute after:inset-0 group-hover:text-brass">
-                      {l(s.title)}
-                    </Link>
-                  </h3>
-                  <p className="mt-2 flex-1 leading-relaxed text-muted">{l(s.lead)}</p>
-                  <p className="mt-4 text-sm">
-                    <span className="font-bold text-brass">
-                      {s.rate ? `${t.common.from} ${formatPrice(s.rate.min)} / m²` : l(s.priceNote).split(' · ')[0]}
-                    </span>
-                    <span className="text-muted"> · {l(s.duration)}</span>
-                  </p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </ul>
+        <ServiceGrid />
+        <Link to={path('offer')} className="btn-outline mt-10">
+          {t.nav.allServices} <ArrowRight aria-hidden="true" className="h-4 w-4" />
+        </Link>
       </section>
 
       {/* 4. Wybrane realizacje */}

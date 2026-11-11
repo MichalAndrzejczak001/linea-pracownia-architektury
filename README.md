@@ -32,9 +32,10 @@ Publikacja: każdy push na gałąź `main` buduje i publikuje stronę na GitHub 
 src/
   i18n/        słowniki PL/EN (typ Dictionary wymusza kompletność tłumaczeń), routing językowy
   data/        treści: firma, usługi i cennik, projekty, aktualności, zespół, opinie, FAQ
-  components/  nagłówek, stopka, baner cookies, kalkulator, galeria, suwak szkic/realizacja…
-  pages/       podstrony: Start, Oferta, Projekty (+ szczegóły), Pracownia, Aktualności (+ wpis),
-               Kontakt (brief), Poradnik, Polityka prywatności, Deklaracja dostępności, 404
+  components/  nagłówek z menu rozwijanym, stopka, baner cookies, kalkulator, galeria, wyszukiwarka, suwak szkic/realizacja…
+  pages/       podstrony: Start, Usługi (+ 8 podstron usług), Realizacje (+ szczegóły), Pracownia,
+               Zespół (+ profile), Opinie, Kariera, Aktualności (+ wpisy), Poradnik, FAQ,
+               Kontakt (brief), Polityka prywatności, Deklaracja dostępności, 404 – razem 43 adresy w każdym języku
   lib/         walidacja formularzy, logika kalkulatora wyceny, wyszukiwarka
 public/
   images/      zdjęcia WebP (źródła w CREDITS.md)

@@ -3,7 +3,8 @@ import { ArrowRight, Quote, Star } from 'lucide-react'
 import { useI18n } from '../i18n/LanguageContext'
 import type { Project } from '../data/projects'
 import { isFresh, type NewsPost } from '../data/news'
-import type { Testimonial } from '../data/people'
+import type { TeamMember, Testimonial } from '../data/people'
+import { fmt } from '../i18n/pl'
 import { Img } from './ui'
 
 export function ProjectCard({ project, headingLevel = 3 }: { project: Project; headingLevel?: 2 | 3 }) {
@@ -100,5 +101,22 @@ export function TestimonialCard({ item }: { item: Testimonial }) {
         </span>
       </figcaption>
     </figure>
+  )
+}
+
+export function MemberCard({ m, headingLevel = 3 }: { m: TeamMember; headingLevel?: 2 | 3 }) {
+  const { t, l, path } = useI18n()
+  const H = headingLevel === 2 ? 'h2' : 'h3'
+  return (
+    <article className="group relative">
+      <Img name={m.image} variant="square" alt={m.name} className="aspect-square w-full grayscale transition duration-500 group-hover:grayscale-0" />
+      <H className="mt-4 text-lg font-bold">
+        <Link to={path('team', m.slug)} className="after:absolute after:inset-0 group-hover:text-brass" aria-label={fmt(t.team.more, { name: m.name })}>
+          {m.name}
+        </Link>
+      </H>
+      <p className="text-sm font-semibold text-brass">{l(m.role)}</p>
+      <p className="mt-2 text-sm leading-relaxed text-muted">{l(m.bio)}</p>
+    </article>
   )
 }

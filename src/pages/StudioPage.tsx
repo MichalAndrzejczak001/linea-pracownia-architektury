@@ -1,12 +1,13 @@
 import { Award } from 'lucide-react'
 import { useI18n } from '../i18n/LanguageContext'
-import { fmt } from '../i18n/pl'
 import { COMPANY, HISTORY, STATS } from '../data/company'
 import { AWARDS, TEAM } from '../data/people'
-import { CtaBand, Img, PageHeader, Reveal, SectionHeading, Seo, SocialIcon } from '../components/ui'
+import { Link } from 'react-router'
+import { CtaBand, Img, PageHeader, Reveal, SectionHeading, Seo } from '../components/ui'
+import { MemberCard } from '../components/cards'
 
 export function StudioPage() {
-  const { t, l, formatNumber } = useI18n()
+  const { t, l, path, formatNumber } = useI18n()
 
   return (
     <>
@@ -68,27 +69,22 @@ export function StudioPage() {
         <SectionHeading id="team-title" title={t.studio.teamTitle} lead={t.studio.teamLead} />
         <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           {TEAM.map((m, i) => (
-            <Reveal as="li" key={m.name} delay={i * 70}>
-              <article>
-                <Img name={m.image} variant="square" alt={m.name} className="aspect-square w-full grayscale transition duration-500 hover:grayscale-0" />
-                <h3 className="mt-4 text-lg font-bold">{m.name}</h3>
-                <p className="text-sm font-semibold text-brass">{l(m.role)}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{l(m.bio)}</p>
-                <a
-                  href={m.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-flex h-11 w-11 items-center justify-center rounded-sm border border-line text-ink hover:border-brass hover:text-brass"
-                >
-                  <SocialIcon name="linkedin" />
-                  <span className="sr-only">
-                    {fmt(t.studio.linkedin, { name: m.name })} {t.common.externalLink}
-                  </span>
-                </a>
-              </article>
+            <Reveal as="li" key={m.slug} delay={i * 70}>
+              <MemberCard m={m} />
             </Reveal>
           ))}
         </ul>
+        <div className="mt-10 flex flex-wrap gap-3">
+          <Link to={path('team')} className="btn-outline">
+            {t.team.back}
+          </Link>
+          <Link to={path('reviews')} className="btn-outline">
+            {t.reviews.title}
+          </Link>
+          <Link to={path('careers')} className="btn-outline">
+            {t.careers.title}
+          </Link>
+        </div>
       </section>
 
       <section className="border-t border-line bg-sand/60 py-20" aria-labelledby="awards-title">

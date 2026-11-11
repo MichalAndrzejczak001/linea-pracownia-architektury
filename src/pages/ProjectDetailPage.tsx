@@ -1,11 +1,14 @@
 import { Link, useParams } from 'react-router'
 import { ArrowLeft, ArrowRight, TrendingUp } from 'lucide-react'
 import { useI18n } from '../i18n/LanguageContext'
-import { PROJECTS, getProject } from '../data/projects'
+import { PROJECTS, getProject, type ProjectCategory } from '../data/projects'
+import { serviceById, type ServiceId } from '../data/services'
 import { CtaBand, Img, PageHeader, Seo } from '../components/ui'
 import { Gallery } from '../components/Gallery'
 import { BeforeAfter } from '../components/BeforeAfter'
 import { NotFoundPage } from './NotFoundPage'
+
+const CATEGORY_SERVICE: Record<ProjectCategory, ServiceId> = { house: 'house', interior: 'interior', adaptation: 'adaptation', commercial: 'commercial' }
 
 export function ProjectDetailPage() {
   const { slug } = useParams()
@@ -49,7 +52,10 @@ export function ProjectDetailPage() {
                 </div>
               ))}
             </dl>
-            <div className="mt-8 bg-ink p-6 text-paper on-dark">
+            <Link to={path('offer', serviceById(CATEGORY_SERVICE[project.category]).slug)} className="btn-outline mt-6 w-full">
+              {l(serviceById(CATEGORY_SERVICE[project.category]).title)}
+            </Link>
+            <div className="mt-6 bg-ink p-6 text-paper on-dark">
               <h2 className="flex items-center gap-2 text-lg font-bold">
                 <TrendingUp aria-hidden="true" className="h-5 w-5 text-brass-light" /> {t.project.results}
               </h2>

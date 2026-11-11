@@ -3,9 +3,13 @@ import type { Lang, Localized } from './types'
 /** Lokalizowane adresy podstron: /pl/oferta ↔ /en/services. */
 export const ROUTES = {
   home: { pl: '', en: '' },
-  offer: { pl: 'oferta', en: 'services' },
+  offer: { pl: 'uslugi', en: 'services' },
   projects: { pl: 'projekty', en: 'projects' },
   studio: { pl: 'pracownia', en: 'studio' },
+  team: { pl: 'zespol', en: 'team' },
+  reviews: { pl: 'opinie', en: 'reviews' },
+  careers: { pl: 'kariera', en: 'careers' },
+  faq: { pl: 'faq', en: 'faq' },
   news: { pl: 'aktualnosci', en: 'news' },
   contact: { pl: 'kontakt', en: 'contact' },
   guide: { pl: 'poradnik', en: 'guide' },

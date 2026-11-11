@@ -25,9 +25,8 @@ export const en: Dictionary = {
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
     language: 'Site language',
-    switchTo: 'Wersja polska',
+    switchTo: 'PL – wersja polska',
     skip: 'Skip to content',
-    homeLink: 'LINEA – home page',
   },
   common: {
     readMore: 'Read more',

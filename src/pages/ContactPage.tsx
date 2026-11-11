@@ -477,14 +477,14 @@ function Check({
 
 function InfoRow({ icon, label, children }: { icon: ReactNode; label: string; children: ReactNode }) {
   return (
-    <div className="flex gap-3">
-      <span aria-hidden="true" className="mt-0.5 text-brass">
-        {icon}
-      </span>
-      <div>
-        <dt className="text-sm text-muted">{label}</dt>
-        <dd className="font-semibold">{children}</dd>
-      </div>
+    <div className="relative pl-8">
+      <dt className="text-sm text-muted">
+        <span aria-hidden="true" className="absolute top-0.5 left-0 text-brass">
+          {icon}
+        </span>
+        {label}
+      </dt>
+      <dd className="font-semibold">{children}</dd>
     </div>
   )
 }

@@ -41,6 +41,17 @@ export function CookieBanner() {
   const [details, setDetails] = useState(false)
   const [analytics, setAnalytics] = useState(() => readConsent()?.analytics ?? false)
   const [marketing, setMarketing] = useState(() => readConsent()?.marketing ?? false)
+  // Baner pojawia się po załadowaniu czcionek – zmiana kroju nie przesuwa go (CLS)
+  const [fontsReady, setFontsReady] = useState(false)
+
+  useEffect(() => {
+    let alive = true
+    const ready = document.fonts?.ready ?? Promise.resolve()
+    ready.then(() => alive && setFontsReady(true))
+    return () => {
+      alive = false
+    }
+  }, [])
 
   useEffect(() => {
     const open = () => {
@@ -51,7 +62,7 @@ export function CookieBanner() {
     return () => window.removeEventListener(OPEN_EVENT, open)
   }, [])
 
-  if (!visible) return null
+  if (!visible || !fontsReady) return null
 
   const finish = (a: boolean, m: boolean) => {
     saveConsent({ analytics: a, marketing: m })

@@ -26,9 +26,8 @@ export const pl = {
     openMenu: 'Otwórz menu',
     closeMenu: 'Zamknij menu',
     language: 'Język strony',
-    switchTo: 'English version',
+    switchTo: 'EN – English version',
     skip: 'Przejdź do treści',
-    homeLink: 'LINEA – strona główna',
   },
   common: {
     readMore: 'Czytaj więcej',

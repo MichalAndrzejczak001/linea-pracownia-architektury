@@ -16,4 +16,6 @@ export default tseslint.config(
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
   },
+  // Plik wejściowy nie jest modułem komponentu – reguła Fast Refresh go nie dotyczy
+  { files: ['src/main.tsx'], rules: { 'react-refresh/only-export-components': 'off' } },
 )

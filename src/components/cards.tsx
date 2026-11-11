@@ -44,8 +44,9 @@ export function ProjectCard({ project, headingLevel = 3 }: { project: Project; h
   )
 }
 
-export function NewsCard({ post }: { post: NewsPost }) {
+export function NewsCard({ post, headingLevel = 3 }: { post: NewsPost; headingLevel?: 2 | 3 }) {
   const { t, l, path, formatDate } = useI18n()
+  const H = headingLevel === 2 ? 'h2' : 'h3'
   return (
     <article className="group relative flex flex-col border border-line bg-white">
       <div className="overflow-hidden">
@@ -58,11 +59,11 @@ export function NewsCard({ post }: { post: NewsPost }) {
           <time dateTime={post.date}>{formatDate(post.date)}</time>
           {isFresh(post.date) && <span className="rounded-sm bg-ink px-2 py-0.5 text-xs font-bold text-paper">{t.common.new}</span>}
         </p>
-        <h3 className="mt-3 text-lg font-bold leading-snug">
+        <H className="mt-3 text-lg font-bold leading-snug">
           <Link to={path('news', post.slug)} className="after:absolute after:inset-0 group-hover:text-brass">
             {l(post.title)}
           </Link>
-        </h3>
+        </H>
         <p className="mt-2 flex-1 leading-relaxed text-muted">{l(post.excerpt)}</p>
         <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-ink" aria-hidden="true">
           {t.common.readMore} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

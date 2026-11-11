@@ -55,8 +55,9 @@ export function Header() {
     <>
     <header className="sticky top-0 z-40 border-b border-line bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85">
       <div className="container-x flex h-18 items-center justify-between gap-6 py-3">
-        <Link to={path('home')} aria-label={t.header.homeLink} onClick={close}>
+        <Link to={path('home')} onClick={close}>
           <Logo />
+          <span className="sr-only"> – {t.nav.home}</span>
         </Link>
 
         <nav aria-label={t.nav.main} className="hidden lg:block">

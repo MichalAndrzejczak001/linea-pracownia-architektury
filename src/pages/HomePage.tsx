@@ -23,7 +23,7 @@ export function HomePage() {
 
       {/* 1. Pierwszy ekran: dla kogo, co robimy, główne CTA */}
       <section className="on-dark relative isolate overflow-hidden bg-ink text-paper" aria-labelledby="hero-title">
-        <Img name="hero" variant="single" priority alt={t.home.heroAlt} className="absolute inset-0 -z-10 h-full w-full" />
+        <Img name="hero" sizes="100vw" priority alt={t.home.heroAlt} className="absolute inset-0 -z-10 h-full w-full" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/95 via-ink/75 to-ink/20" aria-hidden="true" />
         <div className="container-x flex min-h-[78vh] flex-col justify-center py-20 sm:py-28">
           <p className="eyebrow mb-5">{t.home.eyebrow}</p>

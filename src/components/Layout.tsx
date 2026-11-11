@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Outlet, ScrollRestoration, useLocation } from 'react-router'
+import { Outlet, ScrollRestoration, useLocation, useNavigation } from 'react-router'
 import { ArrowUp } from 'lucide-react'
 import { LanguageProvider, useI18n } from '../i18n/LanguageContext'
 import type { Lang } from '../i18n/types'
@@ -34,6 +34,7 @@ function BackToTop() {
 function Shell() {
   const { t } = useI18n()
   const { pathname } = useLocation()
+  const navigation = useNavigation()
   const mainRef = useRef<HTMLElement>(null)
   const prevPath = useRef(pathname)
 
@@ -53,6 +54,10 @@ function Shell() {
       >
         {t.header.skip}
       </a>
+      {/* Pasek postępu podczas doładowywania podstrony (lazy loading) */}
+      {navigation.state === 'loading' && (
+        <div className="fixed inset-x-0 top-0 z-[70] h-1 animate-pulse bg-brass" role="progressbar" aria-label="Loading" />
+      )}
       <Header />
       <main id="main" ref={mainRef} tabIndex={-1} className="outline-none">
         <Outlet />

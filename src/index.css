@@ -1,0 +1,141 @@
+@import '@fontsource-variable/manrope';
+@import 'tailwindcss';
+
+/* Identyfikacja wizualna LINEA: grafit, ciepły beż (papier / beton) i mosiężny akcent.
+   Jedna rodzina kroju pisma (Manrope) – różnicujemy tylko grubość i wielkość. */
+@theme {
+  --font-sans: 'Manrope Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --color-ink: #1d1f22;
+  --color-ink-2: #34373c;
+  --color-muted: #5a5d63;
+  --color-paper: #f7f3ed;
+  --color-sand: #ece4d8;
+  --color-line: #d8cdbd;
+  --color-brass: #855719;
+  --color-brass-light: #d2a865;
+  --color-error: #a3261b;
+  --color-success: #2f6b3a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: 'ss01';
+  }
+  ::selection {
+    @apply bg-brass-light text-ink;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brass);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .on-dark :focus-visible {
+    outline-color: var(--color-brass-light);
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-brass;
+  }
+  .on-dark .eyebrow {
+    @apply text-brass-light;
+  }
+  .link {
+    @apply font-semibold text-brass underline decoration-brass/40 underline-offset-4 hover:decoration-brass;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-semibold text-ink;
+  }
+  .field {
+    @apply w-full rounded-sm border border-line bg-white px-3.5 py-2.5 text-base text-ink placeholder:text-muted/80 focus:border-ink focus:outline-none;
+  }
+  .field[aria-invalid='true'] {
+    @apply border-error;
+  }
+  .field-error {
+    @apply mt-1.5 text-sm font-medium text-error;
+  }
+  .prose-linea p {
+    @apply mb-4 leading-relaxed text-ink-2;
+  }
+  .prose-linea h2 {
+    @apply mt-10 mb-3 text-2xl font-bold;
+  }
+  .prose-linea h3 {
+    @apply mt-6 mb-2 text-lg font-bold;
+  }
+  .prose-linea ul {
+    @apply mb-4 list-disc space-y-1.5 pl-5 text-ink-2;
+  }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-sm px-5 py-3 text-sm font-semibold transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+}
+@utility btn-primary {
+  @apply btn bg-ink text-paper hover:bg-brass;
+}
+@utility btn-accent {
+  @apply btn bg-brass text-white hover:bg-ink;
+}
+@utility btn-light {
+  @apply btn bg-paper text-ink hover:bg-brass-light;
+}
+@utility btn-outline {
+  @apply btn border border-ink text-ink hover:bg-ink hover:text-paper;
+}
+@utility btn-outline-light {
+  @apply btn border border-paper/70 text-paper hover:bg-paper hover:text-ink;
+}
+
+/* Animacja pojawiania się sekcji – wyłączona przy prefers-reduced-motion */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+dialog::backdrop {
+  background: rgb(15 16 18 / 0.92);
+}

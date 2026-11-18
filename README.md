@@ -35,7 +35,7 @@ src/
   components/  nagłówek z menu rozwijanym, stopka, baner cookies, kalkulator, galeria, wyszukiwarka, suwak szkic/realizacja…
   pages/       podstrony: Start, Usługi (+ 8 podstron usług), Realizacje (+ szczegóły), Pracownia,
                Zespół (+ profile), Opinie, Kariera, Aktualności (+ wpisy), Poradnik, FAQ,
-               Kontakt (brief), Polityka prywatności, Deklaracja dostępności, 404 – razem 43 adresy w każdym języku
+               Kontakt (brief), Polityka prywatności, Deklaracja dostępności, 404 – razem 44 adresy w każdym języku
   lib/         walidacja formularzy, logika kalkulatora wyceny, wyszukiwarka
 public/
   images/      zdjęcia WebP (źródła w CREDITS.md)

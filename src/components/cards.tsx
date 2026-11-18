@@ -49,7 +49,7 @@ export function NewsCard({ post, headingLevel = 3 }: { post: NewsPost; headingLe
   const { t, l, path, formatDate } = useI18n()
   const H = headingLevel === 2 ? 'h2' : 'h3'
   return (
-    <article className="group relative flex flex-col border border-line bg-white">
+    <article className="group relative flex h-full flex-col border border-line bg-white">
       <div className="overflow-hidden">
         <Img name={`${post.image}-sm`} variant="single" alt="" className="aspect-[16/9] w-full transition-transform duration-700 group-hover:scale-[1.04]" />
       </div>

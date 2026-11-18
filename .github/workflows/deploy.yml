@@ -29,8 +29,8 @@ jobs:
         run: npm run build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
-      # GitHub Pages nie obsługuje tras SPA – 404.html z aplikacją pozwala wejść bezpośrednio na podstronę
-      - run: cp dist/index.html dist/404.html
+      # GitHub Pages nie obsługuje tras SPA – kopia index.html dla każdej podstrony (kod HTTP 200) i 404.html
+      - run: node scripts/spa-pages.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

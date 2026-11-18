@@ -18,6 +18,41 @@ export interface NewsPost {
 
 export const NEWS: NewsPost[] = [
   {
+    slug: 'willa-biale-linie-fundamenty-gotowe',
+    date: '2026-11-17',
+    category: 'studio',
+    author: 'Paweł Sadowski',
+    image: 'willa-biale-linie-2',
+    title: {
+      pl: 'Willa Białe Linie: fundamenty gotowe przed zimą',
+      en: 'White Lines Villa: foundations completed before winter',
+    },
+    excerpt: {
+      pl: 'Pięć tygodni po starcie budowy w Grotnikach zakończyliśmy fundamenty i izolację. Pokazujemy, co sprawdzamy podczas nadzoru autorskiego.',
+      en: 'Five weeks after construction started in Grotniki, the foundations and insulation are complete. Here is what we check during design supervision.',
+    },
+    body: {
+      pl: [
+        'W ubiegłym tygodniu na budowie Willi Białe Linie w Grotnikach zakończyły się prace fundamentowe. Zdążyliśmy przed pierwszymi przymrozkami, więc ściany parteru mogą ruszyć jeszcze w tym roku.',
+        '## Co sprawdziliśmy na budowie',
+        'Podczas wizyty nadzoru autorskiego skontrolowaliśmy wymiary ław i ścian fundamentowych, ciągłość izolacji przeciwwilgociowej oraz grubość ocieplenia fundamentów – 20 cm XPS zamiast typowych 10 cm. To ważne przy standardzie energetycznym NF40, w którym ma powstać dom.',
+        'Sprawdziliśmy też przepusty instalacyjne pod przyszłą pompę ciepła i przyłącze wody do basenu. Ich przesunięcie po wylaniu płyty byłoby kosztowne, dlatego zawsze kontrolujemy je przed betonowaniem.',
+        '## Co dalej',
+        'Do końca grudnia wykonawca postawi ściany parteru z bloczków silikatowych. Zimą zespół zajmie się projektem wnętrz, a wiosną ruszy piętro. Zakończenie stanu surowego zamkniętego nadal planujemy na maj 2027 roku.',
+        'Kolejną relację z budowy opublikujemy w grudniu. Wszystkie informacje o projekcie znajdziesz w zakładce Realizacje.',
+      ],
+      en: [
+        'Last week the foundation works on the White Lines Villa in Grotniki were completed. We finished before the first frosts, so the ground-floor walls can still go up this year.',
+        '## What we checked on site',
+        'During our design supervision visit we checked the dimensions of the footings and foundation walls, the continuity of the damp-proofing and the thickness of the foundation insulation – 20 cm of XPS instead of the usual 10 cm. This matters for the NF40 energy standard the house is designed to.',
+        'We also checked the service ducts for the future heat pump and the water connection for the pool. Moving them after the slab is poured would be expensive, so we always check them before concreting.',
+        '## What comes next',
+        'By the end of December the contractor will build the ground-floor walls from sand-lime blocks. Over the winter the team will work on the interior design, and the upper floor will start in spring. The closed shell is still planned for May 2027.',
+        'We will publish the next site report in December. You will find all the details of the project in the Projects section.',
+      ],
+    },
+  },
+  {
     slug: 'wyroznienie-lodzka-architektura-roku-2026',
     date: '2026-11-09',
     category: 'awards',

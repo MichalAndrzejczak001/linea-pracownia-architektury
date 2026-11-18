@@ -29,7 +29,6 @@ export const COMPANY = {
     linkedin: 'https://www.linkedin.com/',
     facebook: 'https://www.facebook.com/',
   },
-  rating: { score: 4.9, count: 41 },
 }
 
 export const STATS: { value: number; suffix?: string; label: Localized }[] = [

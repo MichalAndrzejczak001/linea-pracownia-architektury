@@ -1,6 +1,6 @@
 import type { Lang, Localized } from './types'
 
-/** Lokalizowane adresy podstron: /pl/oferta ↔ /en/services. */
+/** Lokalizowane adresy podstron: /pl/uslugi ↔ /en/services. */
 export const ROUTES = {
   home: { pl: '', en: '' },
   offer: { pl: 'uslugi', en: 'services' },

@@ -87,7 +87,7 @@ export const pl = {
     lead: 'Domy jednorodzinne, wnętrza i adaptacje łódzkich loftów – od analizy działki po nadzór na budowie. Ze stałą ceną i harmonogramem w umowie.',
     ctaPrimary: 'Umów bezpłatną konsultację',
     ctaSecondary: 'Zobacz realizacje',
-    rating: 'średnia ocena w {count} opiniach Google',
+    rating: 'średnia ocena z {count} opinii klientów',
     heroAlt: 'Nowoczesny dom z ciemną elewacją i dużymi przeszkleniami o zmierzchu',
     servicesEyebrow: 'Usługi',
     servicesTitle: 'Czym się zajmujemy',

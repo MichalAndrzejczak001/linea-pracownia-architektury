@@ -2,10 +2,10 @@ import { Link } from 'react-router'
 import { ArrowRight, Download, Star } from 'lucide-react'
 import { useI18n } from '../i18n/LanguageContext'
 import { fmt } from '../i18n/pl'
-import { COMPANY, STATS } from '../data/company'
+import { STATS } from '../data/company'
 import { PROJECTS } from '../data/projects'
 import { NEWS_SORTED } from '../data/news'
-import { TESTIMONIALS } from '../data/people'
+import { RATING, TESTIMONIALS } from '../data/people'
 import { CtaBand, Img, Reveal, SectionHeading, Seo } from '../components/ui'
 import { NewsCard, ProjectCard, TestimonialCard } from '../components/cards'
 import { BeforeAfter } from '../components/BeforeAfter'
@@ -45,8 +45,8 @@ export function HomePage() {
                 <Star key={i} className="h-4 w-4 fill-brass-light text-brass-light" />
               ))}
             </span>
-            <strong className="text-paper">{formatNumber(COMPANY.rating.score)}/5</strong>
-            {fmt(t.home.rating, { count: COMPANY.rating.count })}
+            <strong className="text-paper">{formatNumber(RATING.score)}/5</strong>
+            {fmt(t.home.rating, { count: RATING.count })}
           </p>
         </div>
       </section>

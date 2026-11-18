@@ -9,7 +9,7 @@ Strona-wizytówka fikcyjnego biura architektonicznego z Łodzi, przygotowana jak
 
 - **React 19** + **TypeScript** (tryb `strict`) – aplikacja SPA
 - **Vite** – serwer deweloperski i budowanie wersji produkcyjnej
-- **React Router 7** – routing z lokalizowanymi adresami (`/pl/oferta` ↔ `/en/services`)
+- **React Router 7** – routing z lokalizowanymi adresami (`/pl/uslugi` ↔ `/en/services`)
 - **Tailwind CSS 4** – style; jedna rodzina kroju pisma (Manrope, hostowana lokalnie)
 - **lucide-react** – ikony
 - Bez backendu – dane (projekty, aktualności, zespół) w plikach TypeScript w `src/data`

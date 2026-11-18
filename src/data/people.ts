@@ -457,3 +457,9 @@ export const FAQ: { q: Localized; a: Localized; category: FaqCategory }[] = [
     },
   },
 ]
+
+/** Średnia ocena liczona z opinii publikowanych na stronie (pierwszy ekran i podstrona Opinie). */
+export const RATING = {
+  score: Math.round((TESTIMONIALS.reduce((s, r) => s + r.rating, 0) / TESTIMONIALS.length) * 10) / 10,
+  count: TESTIMONIALS.length,
+}

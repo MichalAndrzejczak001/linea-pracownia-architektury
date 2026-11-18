@@ -86,7 +86,7 @@ export const en: Dictionary = {
     lead: 'Single-family houses, interiors and conversions of Łódź lofts – from plot analysis to site supervision. With a fixed price and schedule in the contract.',
     ctaPrimary: 'Book a free consultation',
     ctaSecondary: 'See our projects',
-    rating: 'average rating from {count} Google reviews',
+    rating: 'average rating from {count} client reviews',
     heroAlt: 'Modern house with a dark facade and large glazing at dusk',
     servicesEyebrow: 'Services',
     servicesTitle: 'What we do',
